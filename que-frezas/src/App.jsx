@@ -20,7 +20,7 @@ function App() {
   </svg>
 
   <div style={styles.headerContent}>
-    <img src="/logo.jpg" alt="¡Qué Frezaz!" style={styles.logoMini} />
+    <img src="/logo.png" alt="¡Qué Frezaz!" style={styles.logoMini} />
 
     <nav style={styles.nav}>
       <a href="#inicio" style={styles.link}>Inicio</a>
@@ -108,27 +108,6 @@ headerArch: {
 },
 
 
-headerArch: {
-  position: "absolute",
-  inset: 0,
-  width: "100%",
-  height: "100%",
-  zIndex: 0,
-},
-
-wave: {
-  position: "absolute",
-  bottom: 0,
-  left: 0,
-  width: "100%",
-  height: "80px",
-  zIndex: 1,
-},
-
-logoMini: {
-  width: "95px",
-},
-
 nav: {
   display: "flex",
   gap: "28px",
@@ -143,16 +122,18 @@ link: {
   letterSpacing: "1px",
 },
 
-headerBlob: {
-  position: "absolute",
-  inset: 0,
-  width: "100%",
+headerContent: {
+  position: "relative",
+  zIndex: 1,
   height: "100%",
-  zIndex: 0,
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  padding: "0 7%",
 },
 
 logoMini: {
-  width: "95px",
+  width: "70px",
   height: "auto",
 },
 
