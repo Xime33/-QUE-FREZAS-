@@ -2,37 +2,37 @@ function App() {
   return (
     <main style={styles.page}>
       <header style={styles.header}>
-  <svg
-    viewBox="0 0 1440 220"
-    preserveAspectRatio="none"
-    style={styles.headerArch}
-  >
-    <path
-      d="
-        M0,0
-        H1440
-        V220
-        Q720,20 0,220
-        Z
-      "
-      fill="#FFEFE7"
-    />
-  </svg>
+        <svg
+          viewBox="0 0 1440 260"
+          preserveAspectRatio="none"
+          style={styles.headerArch}
+        >
+          <path
+            d="
+              M0,0
+              H1440
+              V260
+              Q720,35 0,260
+              Z
+            "
+            fill="#FFEFE7"
+          />
+        </svg>
 
-  <div style={styles.headerContent}>
-    <img src="/logo.png" alt="¡Qué Frezaz!" style={styles.logoMini} />
+        <div style={styles.headerContent}>
+          <img src="/logo.png" alt="¡Qué Frezaz!" style={styles.logoMini} />
 
-    <nav style={styles.nav}>
-      <a href="#inicio" style={styles.link}>Inicio</a>
-      <a href="#menu" style={styles.link}>Menú</a>
-      <a href="#ubicacion" style={styles.link}>Ubicación</a>
-    </nav>
-  </div>
-</header>
+          <nav style={styles.nav}>
+            <a href="#inicio" style={styles.link}>Inicio</a>
+            <a href="#menu" style={styles.link}>Menú</a>
+            <a href="#ubicacion" style={styles.link}>Ubicación</a>
+          </nav>
+        </div>
+      </header>
 
       <section id="inicio" style={styles.hero}>
         <div style={styles.arch}>
-          <img src="/logo.jpg" alt="Logo Qué Frezaz" style={styles.logoHero} />
+          <img src="/logo.png" alt="Logo Qué Frezaz" style={styles.logoHero} />
         </div>
 
         <div style={styles.heroText}>
@@ -76,7 +76,11 @@ function App() {
         </div>
 
         <div style={styles.storeImageBox}>
-          <img src="/tienda.jpg" alt="Entrada tienda Qué Frezaz" style={styles.storeImage} />
+          <img
+            src="/tienda.jpg"
+            alt="Entrada tienda Qué Frezaz"
+            style={styles.storeImage}
+          />
         </div>
       </section>
     </main>
@@ -91,51 +95,51 @@ const styles = {
     fontFamily: "Arial, Helvetica, sans-serif",
   },
 
- header: {
-  position: "sticky",
-  top: 0,
-  zIndex: 10,
-  height: "170px",
-  overflow: "hidden",
-},
+  header: {
+    position: "sticky",
+    top: 0,
+    zIndex: 10,
+    height: "clamp(150px, 20vw, 210px)",
+    overflow: "hidden",
+  },
 
-headerArch: {
-  position: "absolute",
-  inset: 0,
-  width: "100%",
-  height: "100%",
-  zIndex: 0,
-},
+  headerArch: {
+    position: "absolute",
+    inset: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 0,
+  },
 
+  headerContent: {
+    position: "relative",
+    zIndex: 1,
+    height: "70%",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: "0 clamp(18px, 7vw, 100px)",
+  },
 
-nav: {
-  display: "flex",
-  gap: "28px",
-},
+  logoMini: {
+    width: "clamp(55px, 8vw, 70px)",
+    height: "auto",
+  },
 
-link: {
-  textDecoration: "none",
-  color: "#E94B5D",
-  fontWeight: "900",
-  textTransform: "uppercase",
-  fontSize: "14px",
-  letterSpacing: "1px",
-},
+  nav: {
+    display: "flex",
+    gap: "clamp(10px, 3vw, 28px)",
+    alignItems: "center",
+  },
 
-headerContent: {
-  position: "relative",
-  zIndex: 1,
-  height: "100%",
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  padding: "0 7%",
-},
-
-logoMini: {
-  width: "70px",
-  height: "auto",
-},
+  link: {
+    textDecoration: "none",
+    color: "#E94B5D",
+    fontWeight: "900",
+    textTransform: "uppercase",
+    fontSize: "clamp(10px, 2.4vw, 14px)",
+    letterSpacing: "1px",
+  },
 
   hero: {
     minHeight: "90vh",
